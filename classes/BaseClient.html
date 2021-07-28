@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Webhook | guildcord.js</title>
+	<title>BaseClient | guildcord.js</title>
 	<meta name="description" content="Documentation for guildcord.js">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<style type="text/css">:root {
@@ -2702,8 +2702,16 @@ img {
 </header>
 <nav class="tsd-navigation secondary">
 	<ul>
-		<li class=" tsd-kind-class">
+		<li class="current tsd-kind-class">
 			<a href="BaseClient.html" class="tsd-kind-icon">Base<wbr>Client</a>
+			<ul>
+				<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
+					<a href="BaseClient.html#constructor" class="tsd-kind-icon">constructor</a>
+				</li>
+				<li class=" tsd-kind-method tsd-parent-kind-class">
+					<a href="BaseClient.html#debug" class="tsd-kind-icon">debug</a>
+				</li>
+			</ul>
 		</li>
 		<li class=" tsd-kind-class">
 			<a href="Client.html" class="tsd-kind-icon">Client</a>
@@ -2714,19 +2722,8 @@ img {
 		<li class=" tsd-kind-class">
 			<a href="Embed.html" class="tsd-kind-icon">Embed</a>
 		</li>
-		<li class="current tsd-kind-class">
+		<li class=" tsd-kind-class">
 			<a href="Webhook.html" class="tsd-kind-icon">Webhook</a>
-			<ul>
-				<li class=" tsd-kind-constructor tsd-parent-kind-class">
-					<a href="Webhook.html#constructor" class="tsd-kind-icon">constructor</a>
-				</li>
-				<li class=" tsd-kind-property tsd-parent-kind-class">
-					<a href="Webhook.html#url" class="tsd-kind-icon">url</a>
-				</li>
-				<li class=" tsd-kind-method tsd-parent-kind-class">
-					<a href="Webhook.html#send" class="tsd-kind-icon">send</a>
-				</li>
-			</ul>
 		</li>
 		<li class=" tsd-kind-interface">
 			<a href="../interfaces/WebhookAuth.html" class="tsd-kind-icon">Webhook<wbr>Auth</a>
@@ -2742,7 +2739,17 @@ img {
 			<h3>Hierarchy</h3>
 			<ul class="tsd-hierarchy">
 				<li>
-					<span class="target">Webhook</span>
+					<span class="tsd-signature-type">EventEmitter</span>
+					<ul class="tsd-hierarchy">
+						<li>
+							<span class="target">BaseClient</span>
+							<ul class="tsd-hierarchy">
+								<li>
+									<a href="Client.html" class="tsd-signature-type" data-tsd-kind="Class">Client</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
 				</li>
 			</ul>
 		</section>
@@ -2753,19 +2760,13 @@ img {
 					<section class="tsd-index-section ">
 						<h3>Constructors</h3>
 						<ul class="tsd-index-list">
-							<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="Webhook.html#constructor" class="tsd-kind-icon">constructor</a></li>
-						</ul>
-					</section>
-					<section class="tsd-index-section ">
-						<h3>Properties</h3>
-						<ul class="tsd-index-list">
-							<li class="tsd-kind-property tsd-parent-kind-class"><a href="Webhook.html#url" class="tsd-kind-icon">url</a></li>
+							<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite"><a href="BaseClient.html#constructor" class="tsd-kind-icon">constructor</a></li>
 						</ul>
 					</section>
 					<section class="tsd-index-section ">
 						<h3>Methods</h3>
 						<ul class="tsd-index-list">
-							<li class="tsd-kind-method tsd-parent-kind-class"><a href="Webhook.html#send" class="tsd-kind-icon">send</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class"><a href="BaseClient.html#debug" class="tsd-kind-icon">debug</a></li>
 						</ul>
 					</section>
 				</div>
@@ -2773,73 +2774,47 @@ img {
 		</section>
 		<section class="tsd-panel-group tsd-member-group ">
 			<h2>Constructors</h2>
-			<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
+			<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
 				<a name="constructor" class="tsd-anchor"></a>
 				<h3>constructor</h3>
-				<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-					<li class="tsd-signature tsd-kind-icon">new <wbr>Webhook<span class="tsd-signature-symbol">(</span>auth<span class="tsd-signature-symbol">: </span><a href="../interfaces/WebhookAuth.html" class="tsd-signature-type" data-tsd-kind="Interface">WebhookAuth</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="Webhook.html" class="tsd-signature-type" data-tsd-kind="Class">Webhook</a></li>
+				<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
+					<li class="tsd-signature tsd-kind-icon">new <wbr>Base<wbr>Client<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="BaseClient.html" class="tsd-signature-type" data-tsd-kind="Class">BaseClient</a></li>
 				</ul>
 				<ul class="tsd-descriptions">
 					<li class="tsd-description">
 						<aside class="tsd-sources">
+							<p>Overrides EventEmitter.constructor</p>
 							<ul>
-								<li>Defined in <a href="https://github.com/guildcord/guildcord/blob/5969de8/src/structures/Webhook.ts#L31">structures/Webhook.ts:31</a></li>
+								<li>Defined in client/BaseClient.ts:4</li>
 							</ul>
 						</aside>
-						<h4 class="tsd-parameters-title">Parameters</h4>
-						<ul class="tsd-parameters">
-							<li>
-								<h5>auth: <a href="../interfaces/WebhookAuth.html" class="tsd-signature-type" data-tsd-kind="Interface">WebhookAuth</a></h5>
-							</li>
-						</ul>
-						<h4 class="tsd-returns-title">Returns <a href="Webhook.html" class="tsd-signature-type" data-tsd-kind="Class">Webhook</a></h4>
+						<h4 class="tsd-returns-title">Returns <a href="BaseClient.html" class="tsd-signature-type" data-tsd-kind="Class">BaseClient</a></h4>
 					</li>
 				</ul>
 			</section>
 		</section>
 		<section class="tsd-panel-group tsd-member-group ">
-			<h2>Properties</h2>
-			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-				<a name="url" class="tsd-anchor"></a>
-				<h3>url</h3>
-				<div class="tsd-signature tsd-kind-icon">url<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
-				<aside class="tsd-sources">
-					<ul>
-						<li>Defined in <a href="https://github.com/guildcord/guildcord/blob/5969de8/src/structures/Webhook.ts#L29">structures/Webhook.ts:29</a></li>
-					</ul>
-				</aside>
-				<div class="tsd-comment tsd-typography">
-					<div class="lead">
-						<p>The url of the webhook</p>
-					</div>
-				</div>
-			</section>
-		</section>
-		<section class="tsd-panel-group tsd-member-group ">
 			<h2>Methods</h2>
 			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-				<a name="send" class="tsd-anchor"></a>
-				<h3>send</h3>
+				<a name="debug" class="tsd-anchor"></a>
+				<h3>debug</h3>
 				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-					<li class="tsd-signature tsd-kind-icon">send<span class="tsd-signature-symbol">(</span>WebhookContent<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="../interfaces/WebhookOps.html" class="tsd-signature-type" data-tsd-kind="Interface">WebhookOps</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">&gt;</span></li>
+					<li class="tsd-signature tsd-kind-icon">debug<span class="tsd-signature-symbol">(</span>text<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 				</ul>
 				<ul class="tsd-descriptions">
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/guildcord/guildcord/blob/5969de8/src/structures/Webhook.ts#L39">structures/Webhook.ts:39</a></li>
+								<li>Defined in client/BaseClient.ts:8</li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<ul class="tsd-parameters">
 							<li>
-								<h5>WebhookContent: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="../interfaces/WebhookOps.html" class="tsd-signature-type" data-tsd-kind="Interface">WebhookOps</a></h5>
-								<div class="tsd-comment tsd-typography">
-									<p>The content to send with the webhook</p>
-								</div>
+								<h5>text: <span class="tsd-signature-type">string</span></h5>
 							</li>
 						</ul>
-						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 					</li>
 				</ul>
 			</section>
